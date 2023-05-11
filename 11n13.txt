@@ -1,0 +1,26 @@
+11. for  ddos
+
+hping3 -1 --flood --rand-source -c 10000 192.168.68.107 
+
+
+13. TCP three-way handshake.
+
+ The process involves three steps:
+
+The initiating device sends a SYN (synchronize) packet to the receiving device, requesting to establish a connection.
+The receiving device responds with a SYN-ACK (synchronize-acknowledge) packet, indicating that it received the request and is willing to establish a connection.
+The initiating device sends an ACK (acknowledge) packet, confirming that it received the SYN-ACK packet and is ready to communicate.
+
+
+Now, let's demonstrate this process using Wireshark. Here are the steps:
+
+Start Wireshark and select the network interface you want to capture packets on.
+Click on the "Capture Options" button to configure your capture settings. Make sure to select the "Promiscuous mode" checkbox so that Wireshark captures all packets on the network, not just those addressed to your device.
+Click on the "Start" button to begin capturing packets.
+Open a web browser and navigate to a website, for example, www.google.com.
+Stop the capture in Wireshark.
+In the Wireshark packet list pane, locate the first packet sent from your device to the web server. It should be a TCP packet with the SYN flag set (the SYN flag is represented by a small "S" in the "Flags" column).
+Right-click on the packet and select "Follow TCP Stream" to view the entire conversation between your device and the web server.
+In the "Follow TCP Stream" window, you should see the SYN packet sent by your device in the first line.
+The second line in the window should be the SYN-ACK packet sent by the web server in response to your device's request. Note that this packet has both the SYN and ACK flags set.
+Finally, the third line should be the ACK packet sent by your device to the web server, confirming the establishment of a connection.

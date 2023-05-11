@@ -1,0 +1,17 @@
+12. Use network sniffing tools to demonstrate the difference between http and https.
+
+
+Now, let's demonstrate the difference between HTTP and HTTPS using Wireshark. Here are the steps:
+
+Start Wireshark and select the network interface you want to capture packets on.
+Click on the "Capture Options" button to configure your capture settings. Make sure to select the "Promiscuous mode" checkbox so that Wireshark captures all packets on the network, not just those addressed to your device.
+Click on the "Start" button to begin capturing packets.
+Open a web browser and navigate to a website that uses HTTP, for example, www.google.com.
+Stop the capture in Wireshark.
+In the Wireshark packet list pane, locate the packets sent between your device and the web server.
+Look for the packets with the protocol "HTTP" in the "Protocol" column. These packets will show the unencrypted data being sent between your device and the web server, including URLs, HTTP headers, and any form data that you submit.
+Now, repeat the same steps, but this time, navigate to a website that uses HTTPS, for example, https://www.google.com.
+Stop the capture in Wireshark.
+In the Wireshark packet list pane, locate the packets sent between your device and the web server.
+Look for the packets with the protocol "TLSv1.2" in the "Protocol" column. These packets will show the encrypted data being sent between your device and the web server, including URLs, HTTP headers, and any form data that you submit.
+You can view the contents of the encrypted packets by right-clicking on the packet and selecting "Follow SSL Stream". Wireshark will display the decrypted data for you to inspect.
